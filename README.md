@@ -1,12 +1,15 @@
-# portphp/portphp
+# evosys21/portphp-portphp
 
-[![Latest Version](https://img.shields.io/github/release/portphp/portphp.svg?style=flat-square)](https://github.com/portphp/portphp/releases)
+[![Latest Version](https://img.shields.io/github/release/portphp/portphp.svg?style=flat-square)](https://github.com/evosys21/portphp-portphp/releases)
 [![Build Status](https://travis-ci.org/portphp/portphp.svg)](https://travis-ci.org/portphp/portphp)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/portphp/portphp/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/portphp/portphp/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/portphp/portphp/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/portphp/portphp/?branch=master)
 [![Slack Status](http://slack.portphp.org/badge.svg)](http://slack.portphp.org)
 
 Port is a data import/export workflow for PHP.
+
+## Note
+This is a cloned version of: https://github.com/portphp/portphp
 
 ## Installation
 
@@ -27,12 +30,12 @@ Documentation is available at https://portphp.readthedocs.org.
 
 ## Issues and feature requests
 
-Please report issues and request features at https://github.com/portphp/portphp/issues.
+Please report issues and request features at https://github.com/evosys21/portphp-portphp/issues.
 
 ## Contributing
 
 Contributions are very welcome. Please see [CONTRIBUTING.md](CONTRIBUTING.md) for
-details. Thanks to [everyone who has contributed](https://github.com/portphp/portphp/graphs/contributors)
+details. Thanks to [everyone who has contributed](https://github.com/evosys21/portphp-portphp/graphs/contributors)
 already.
 
 ## License

@@ -1,15 +1,15 @@
 # Readers
 
 Readers read data that will be imported by iterating over it. PortPHP ships
-with many readers: both for reading CSV and Excel files and for reading SQL and 
-NoSQL databases. Additionally, you can easily 
+with many readers: both for reading CSV and Excel files and for reading SQL and
+NoSQL databases. Additionally, you can easily
 [add your own readers](#create-a-reader).
 
 Readers are:
 
 - iterable, for easy processing;
-- optimized to use as little memory as possible, which is particularly 
-  important in case of large datasets. 
+- optimized to use as little memory as possible, which is particularly
+  important in case of large datasets.
 
 You can use readers on their own, or construct a [workflow](workflow.md) from them:
 
@@ -172,7 +172,7 @@ $reader = new DoctrineReader($objectManager, Employee::class);
 
 ## Excel
 
-An adapter for the [PHPExcel library](http://phpexcel.codeplex.com/). 
+An adapter for the [PHPExcel library](http://phpexcel.codeplex.com/).
 
 {!include/excel.md!}
 
@@ -200,7 +200,7 @@ $reader = new ExcelReader($file, null, 3);
 
 ## Spreadsheet
 
-An adapter for the [PHPSpreadsheet library](https://phpspreadsheet.readthedocs.io/). 
+An adapter for the [PHPSpreadsheet library](https://phpspreadsheet.readthedocs.io/).
 
 {!include/spreadsheet.md!}
 
@@ -228,7 +228,7 @@ $reader = new SpreadsheetReader($file, null, 3);
 
 ## OneToManyReader
 
-Allows for merging of two data sources (using existing readers), for example 
+Allows for merging of two data sources (using existing readers), for example
 you have one CSV with orders and another with order items.
 
 Imagine two CSVs like the following:
@@ -336,6 +336,6 @@ $reader = new PdoReader($pdo, 'SELECT u.id, u.username, g.name FROM `pdo_user`')
 ## Create a reader
 
 You can create your own data reader by implementing the
-[Reader](https://github.com/portphp/portphp/blob/master/src/Reader.php) interface, which extends the PHP
+[Reader](https://github.com/evosys21/portphp-portphp/blob/master/src/Reader.php) interface, which extends the PHP
 [Iterator interface](http://php.net/manual/en/class.iterator.php). To get an
-idea, have a look at the [readers included in this library](https://github.com/portphp/portphp/tree/master/src/Reader).
+idea, have a look at the [readers included in this library](https://github.com/evosys21/portphp-portphp/tree/master/src/Reader).

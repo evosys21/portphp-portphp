@@ -1,20 +1,20 @@
 # Workflow
 
 The workflow streamlines your data imports/exports. Using the workflow, you can create
-re-usable pipelines for processing your data. Each pipeline takes place along 
+re-usable pipelines for processing your data. Each pipeline takes place along
 the following lines:
 
 1. Construct a [reader](readers.md).
-2. Construct a workflow, passing the reader to it. Optionally set a logger on 
-   the workflow. 
-3. Add at least one [writer](writers.md) to the workflow. Optionally, customize 
+2. Construct a workflow, passing the reader to it. Optionally set a logger on
+   the workflow.
+3. Add at least one [writer](writers.md) to the workflow. Optionally, customize
    the workflow by adding filters, converters, mappers, etc.
-4. Process the workflow. This will read data from the reader, filters and 
+4. Process the workflow. This will read data from the reader, filters and
    convert the data, and write the output to each of the writers. At the end of
-   the process, a [Result](#the-workflow-result) object is returned which 
+   the process, a [Result](#the-workflow-result) object is returned which
    contains counts and information about (failed) reads and writes.
-   
-In other words, the workflow acts as a *mediator* between a reader and one or 
+
+In other words, the workflow acts as a *mediator* between a reader and one or
 more writers, filters and converters. Schematically:
 
 ```php
@@ -33,9 +33,9 @@ $result = $workflow
 
 ## The workflow result
 
-The Workflow `Result` object exposes various methods which you can use to 
+The Workflow `Result` object exposes various methods which you can use to
 decide what to do after an import. It is automatically created and populated by
-the Workflow. It will be returned to you after calling the `process()` method on 
+the Workflow. It will be returned to you after calling the `process()` method on
 the Workflow. Examples use cases include:
 
 - send an e-mail with the results of the import pipeline
@@ -78,14 +78,14 @@ public function getExceptions();
 
 # StepAggregator
 
-Currently, PortPHP ships with one Workflow, the StepAggregator, which is 
+Currently, PortPHP ships with one Workflow, the StepAggregator, which is
 flexible enough to cover a wide array of data processing workflows.
 
 The StepAggregator is an import/export workflow that is divided into steps.
 Each step performs a specific task, such as filtering, converting or mapping
 your data. The steps can be combined in any order you like.
 
-{!include/steps.md!} 
+{!include/steps.md!}
 
 ```php
 use Port\Steps\StepAggregator;
@@ -104,7 +104,7 @@ StepAggregator workflow (see above).
 
 ## ConverterStep
 
-Converts your input data. Construct a `ConverterStep` and add one or more 
+Converts your input data. Construct a `ConverterStep` and add one or more
 callables to it that do the conversion:
 
 ```php
@@ -122,7 +122,7 @@ $output = $step->process('some data');   // 'dong'
 ## FilterStep
 
 The filter step determines whether the input data should be processed further.
-If any of the callables in the step returns false, the data will be skipped 
+If any of the callables in the step returns false, the data will be skipped
 from processing:
 
 ```php
@@ -166,10 +166,10 @@ $step->add(new OffsetFilter(5, 10));
 ## MappingStep
 
 Use the MappingItemConverter to add mappings to your workflow. Your keys from
-the input data will be renamed according to these mappings. 
+the input data will be renamed according to these mappings.
 
 Say you have input data:
-  
+
 ```php
 $data = [
     'foo' => 'bar',
@@ -259,7 +259,7 @@ class SpecialFilteringStep implements Step
 
 ## Create your own workflow
 
-If you even more flexibility, you can implement your own 
-[Workflow](https://github.com/portphp/portphp/blob/master/src/Workflow.php).
+If you even more flexibility, you can implement your own
+[Workflow](https://github.com/evosys21/portphp-portphp/blob/master/src/Workflow.php).
 
 {!include/todo.md!}

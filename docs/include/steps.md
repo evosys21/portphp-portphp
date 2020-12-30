@@ -1,4 +1,4 @@
-First install the [Steps package](https://github.com/portphp/steps), which
+First install the [Steps package](https://github.com/evosys21/portphp-steps), which
 includes the StepAggregator:
 
 ```bash
@@ -11,6 +11,6 @@ And include Composer’s autoloader in your project:
 require_once 'vendor/autoload.php';
 ```
 
-For integration with Symfony projects, a 
-[PortSymfonyBundle](https://github.com/portphp/symfony-bundle) is available.
+For integration with Symfony projects, a
+[PortSymfonyBundle](https://github.com/evosys21/portphp-portphp/symfony-bundle) is available.
 

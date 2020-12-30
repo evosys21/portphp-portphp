@@ -15,7 +15,7 @@ pages:
   - upgrading.md
   - contributing.md
 site_url: http://portphp.org
-repo_url: https://github.com/portphp/portphp
+repo_url: https://github.com/evosys21/portphp-portphp/portphp
 markdown_extensions:
   - toc:
       permalink: true
